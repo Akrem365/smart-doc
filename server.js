@@ -39,6 +39,7 @@ app.use(express.json());
 console.log("hello");
 
 // Activer CORS avant la définition des routes
+app.use(cors({ origin: "*" }));
 app.use(cors({ origin: "http://localhost:3000" }));
 
 //routes
