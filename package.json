@@ -8,7 +8,8 @@
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
     "start": "node server.js",
-    "predeploy": "npm install concurrently -g"
+    "predeploy": "npm install concurrently -g",
+    "build": "react-scripts build"
   },
   "keywords": [],
   "author": "",
