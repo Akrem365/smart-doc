@@ -7,8 +7,8 @@
   "scripts": {
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
- 
-    "start": "node server.js" ,
+    "build": "npm run build --prefix client",
+    "start": "node server.js",
     "predeploy": "npm install concurrently -g"
   },
   "keywords": [],
