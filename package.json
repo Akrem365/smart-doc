@@ -9,7 +9,6 @@
     "client": "npm start --prefix client",
     "start": "node server.js",
     "predeploy": "npm install concurrently -g",
-    "build": "npm run build-client && npm install",
     "build-client": "react-scripts build"
   },
   "keywords": [],
