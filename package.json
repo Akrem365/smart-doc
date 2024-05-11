@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "start": "node server.js",
     "predeploy": "npm install concurrently -g",
-    "build": "npm run build --prefix client",
+    "build": "npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
