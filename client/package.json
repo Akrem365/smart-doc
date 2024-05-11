@@ -26,8 +26,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build-client && npm install",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
