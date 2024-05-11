@@ -10,7 +10,9 @@ import "express-async-errors";
 import morgan from "morgan";
 import http from "http";
 import { Server } from "socket.io";
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+console.log(__dirname);
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
@@ -25,8 +27,13 @@ io.use((socket, next) => {
   next();
 });
 
-if (process.env.NODE_ENV !== "production") {
-  app.use(morgan("dev"));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+
+  // Toutes les routes non définies ci-dessus seront servies par le frontend React
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  });
 }
 app.use(express.json());
 console.log("hello");
@@ -43,6 +50,7 @@ import HistoriqueRoute from "./routes/HistoriqueRoute.js";
 import { updateParamsViatux } from "./controller/ParamsVitauxController.js";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 app.get("/", (req, res) => {
   // throw new Error("error");
