@@ -28,13 +28,11 @@ io.use((socket, next) => {
 });
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.use(express.static(path.join(__dirname, "client", "build")));
 
   // Toutes les routes non définies ci-dessus seront servies par le frontend React
   app.get("*", (req, res) => {
-    res.sendFile(
-      "C:\\Users\\Akrem\\Desktop\\smart-doctor\\client\\build\\index.html"
-    );
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
 }
 app.use(express.json());
