@@ -32,7 +32,9 @@ if (process.env.NODE_ENV === "production") {
 
   // Toutes les routes non définies ci-dessus seront servies par le frontend React
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    res.sendFile(
+      "C:\\Users\\Akrem\\Desktop\\smart-doctor\\client\\build\\index.html"
+    );
   });
 }
 app.use(express.json());
