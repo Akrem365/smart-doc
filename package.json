@@ -7,9 +7,9 @@
   "scripts": {
     "server": "nodemon server --ignore client",
     "client": "npm start --prefix client",
-    "build": "npm run build --prefix client",
     "start": "node server.js",
-    "predeploy": "npm install concurrently -g"
+    "predeploy": "npm install concurrently -g",
+    "build": "npm run build --prefix client",
   },
   "keywords": [],
   "author": "",
