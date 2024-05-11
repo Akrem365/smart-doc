@@ -1,7 +1,7 @@
 {
   "name": "me-jobify",
   "version": "1.0.0",
-  "description": "Project in Action - [Jobify](https://www.jobify.live/)",
+  "description": "Project in Action ",
   "main": "index.js",
   "type": "module",
   "scripts": {

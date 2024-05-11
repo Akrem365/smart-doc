@@ -18,7 +18,9 @@ import SharedLayout from "./pages/Dashboared/sharedLayout.js";
 import { useAppcontext } from "./context/appContext.js";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
-const socket = io("http://192.168.1.2:5000");
+// const socket = io("http://192.168.1.2:5000");
+const socket = io(`${window.location.origin}`);
+
 socket.on("connect", () => {
   console.log("Connected to server");
 });
