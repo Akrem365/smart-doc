@@ -40,7 +40,7 @@ console.log("hello");
 
 // Activer CORS avant la définition des routes
 app.use(cors({ origin: "*" }));
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: ["http://localhost:3000", "http://localhost:3001"] }));
 
 //routes
 import authRouter from "./routes/authRoute.js";

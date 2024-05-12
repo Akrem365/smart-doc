@@ -125,7 +125,7 @@ function AppProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   //Axios
   const authFetch = axios.create({
-    baseURL: "/api/v1",
+    baseURL: "https:/smart-doc-2.onrender.com/api/v1",
     // headers: {
     //   Authorization: `Bearer ${state.token}`,
     // },
