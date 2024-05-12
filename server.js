@@ -8,13 +8,13 @@ import connectDB from "./db/connect.js";
 dotenv.config();
 import "express-async-errors";
 import morgan from "morgan";
-import http from "http";
+import https from "https";
 import { Server } from "socket.io";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(__dirname);
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "*",
